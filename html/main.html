@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	</head>
+	<body>
+	</body>
+	<script>
+		window.addEventListener('message', function(event) {
+			if (event.data.type == "playsound") {
+				var msg = new Audio('./main.mp3');
+				msg.volume = 0.4;
+				msg.play();
+			}
+			if (event.data.type == "police") {
+				var msg = new Audio('./police.mp3');
+				msg.volume = 0.3;
+				msg.play();
+			}
+		});
+	</script>
+</html>
